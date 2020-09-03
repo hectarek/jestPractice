@@ -1,5 +1,17 @@
 const functions = require('./functions');
 
+// Make a test that will run before a specified function 
+
+// beforeEach(() => initDatabase());
+// afterEach(() => closeDatabase());
+
+beforeAll(() => initDatabase());
+afterAll(() => closeDatabase());
+
+const initDatabase = () => console.log('Database Iniialized...')
+const closeDatabase = () => console.log('Database Closed...')
+
+
 // Basic tests
 
 test("Add 2 + 2 to equal 4", () => {
